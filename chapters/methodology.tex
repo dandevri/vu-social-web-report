@@ -1,6 +1,28 @@
 \section{Methodology}
 
-\subsection{Scope}
+\subsection{Data collection (datasets)}
+
+To gather social web data from Mastodon the official public Mastodon API \footnote{https://docs.joinmastodon.org/client/intro/} using the Mastodon.py \footnote{https://mastodonpy.readthedocs.io/en/stable/}wrapper for Python is used. Mastodon is an ActivityPub-based \footnote{https://www.w3.org/TR/activitypub/} Twitter-like federated social network node. The API wrapper is feature complete for Mastodon the Mastodon API version 3.5.5. First a user account is created on the platform by completing the sign-up for an account flow on the Mastodon official website \textit{joingmastodon.org}. The account is created on the general and largest public server (provider) \textit{mastodon.social} operated by the Mastodon gGmbH non-profit.
+
+To interact with the Mastodon servers through Python using the Mastodon.py wrapper an application registration is performed which gives a client key and client secret to allow logging in and accessing API data using access tokens. For this research we mainly used API methods for:
+
+\begin{itemize}
+  \item \textbf{Accounts, relationships and lists:} allows for geting information about accounts and associated data as well as update that data
+  \item \textbf{Instance-wide data and search:}  fetch information associated with the current instance as well as data from the instance-wide profile directory
+  \item \textbf{Streaming:} allow access to the streaming API. For the public, local and hashtag streams,
+\end{itemize}
+
+Arguments and parameters used in functions written for the Mastodon API methods are related to the dutch elections (e.g. names of political candidates, popular topics from parties) further expanded upon in the data preprocessing and results section of this research. To check, validate and cross-reference the sub-questions the data is complementend with five additional election related data sources: 
+
+\begin{itemize}
+  \item \textbf{Institut Public de Sondage d'Opinion Secteur (IPSOS) exitpoll:} a market research company which, commisioned by the 'Nederlandse Omroep Stichting' \footnote{https://nos.nl/} (NOS; English: Dutch Broadcasting Foundation) publishes market research about the elections (e.g. which voters switch between parties, which municipilaties has switched the most between parties) \cite{nos}. This gives a comprehensive insight of voting behaviour from the recent election.
+  \item \textbf{Government Open Data (overheid.nl)}: specifically the datasets from The Dutch Electoral Council \footnote{https://www.kiesraad.nl/} (Dutch: Kiesraad), the government body that is responsibly for counting of the votes and publishing the results \cite{kiesraad}. This gives the official results of parties and candidates from the recent elections.
+  \item \textbf{ProDemos voting guide (stemwijzer)}: a voting guide called Stemwijzer \footnote{https://home.stemwijzer.nl/} with pre-defined topics. By answering 30 statements with agree, disagree or no opinion, voters can compare their positions with those of political parties. Many of these voting guides exist, ProDemos is most requested and partly funded by the dutch government \cite{prodemos}. This gives insight in important topics from political parties for the recent elections.
+  \item \textbf{Electoral Council (kiesraad)}: the Kiesraad \footnote{https://english.kiesraad.nl/} is a central electoral committee, an advisory body and acts as a central polling station during the dutch house of representatives election. For this research we used the published Candidacy for the House of Representatives election list and the Political Party Registrar.
+  \item \textbf{Netherlands Bureau for Economic Policy Analysis (cpb)}: the dutch economics bureau (CPB) \footnote{https://www.cpb.nl/en/charted-choices-2025-2028} performs election manifestos analysis to determine how feasible manifestos of political parties are. This gives an overview of topics that are in the election manifestos of political parties.
+\end{itemize}
+
+\subsection{Data preprocessing (scope)}
 
 - Timeline from previous elections 2019. \\
 - Only 'sitting' parties. There are more parties in total. \\
@@ -10,17 +32,7 @@ Each of the parties is placed on a political spectrum (left, lean left, center, 
 
 Here a table of all parties? If they are left-wing, right-wing. How many zetels.
 
-\subsection{Data collection (datasets)}
 
-\textbf{WRITE ABOUT MASTODON API ETC.} \\
-
-To check, validate and cross-reference our sub-questions we complement this data with three additional data sources: 
-
-\begin{itemize}
-  \item \textbf{Institut Public de Sondage d'Opinion Secteur (IPSOS) exitpoll:} a market research company which, commisioned by the 'Nederlandse Omroep Stichting' \footnote{https://nos.nl/} (NOS; English: Dutch Broadcasting Foundation) publishes market research about the elections (e.g. which voters switch between parties, which municipilaties has switched the most between parties) \cite{nos}.
-  \item \textbf{Government Open Data (overheid.nl)}: specifically the datasets from The Dutch Electoral Council \footnote{https://www.kiesraad.nl/} (Dutch: Kiesraad), the government body that is responsibly for counting of the votes and publishing the results \cite{kiesraad}.
-  \item \textbf{ProDemos voting guide (stemwijzer)}: a voting guide called Stemwijzer \footnote{https://home.stemwijzer.nl/} with pre-defined topics. By answering 30 statements with agree, disagree or no opinion, voters can compare their positions with those of political parties. Many of these voting guides exist, ProDemos is most requested and partly funded by the dutch government \cite{prodemos}.
-\end{itemize}
 
 \subsection{Data analysis}
 
