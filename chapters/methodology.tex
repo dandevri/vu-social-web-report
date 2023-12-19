@@ -26,16 +26,51 @@ Arguments and parameters used in functions written for the Mastodon API methods 
 
 From the dutch-election gathered data sources first a relevant scope for this research is determined. For a datetime timeline of data we use data from Mastodon's initial release of 16 March 2016 (7 years ago). This means we analyse three House of Representatives elections. In 2017 with a turn-out rate of 81,57\% of dutch population, in 2021 with a turn-out rate of 78,71\% of dutch population and the most recent as of writing this paper in 2023 with a turn-out rate of 77,75\% of dutch population. Usually dutch elections take place every four years (thus next elections  had been expected to be held in 2025) but a snap election was called after the fourth Rutte cabinet collapsed due to immigration policy disagreements between the coalition parties.
 
-In total during this timeframe a total of X unique parties could be voted on during the elections. 28 unique parties in 2017, 37 unique parties in 2021 and 26 unique parties in 2023. For this research we created a subset of political parties based on incumbent parties ('zittende partijen' in dutch) based on the results of most recent and previous elections. This research also has taken synonyms and abbreviations of parties into account (e.g. Forum voor Democratie is often abbreviated to 'FvD' or GL-PvdA is still often mentioned with full names after the merger in 2022 as Groenlinks and Partij voor de Arbied) Figure \ref{marker} displays an overview of parties used for this research. \\
+In total during this timeframe a total of 42 unique parties could be voted on during the elections. 28 parties in 2017, 37 parties in 2021 and 26 parties in 2023. For this research we created a subset of political parties based on incumbent parties ('zittende partijen' in dutch) based on the results of most recent and previous elections. This gives a total of 20 parties. This research also has taken synonyms and abbreviations of parties into account (e.g. Forum voor Democratie is often abbreviated to 'FvD' or GL-PvdA is still often mentioned with full names after the merger in 2022 as Groenlinks and Partij voor de Arbied) \textit{Table \ref{party-table}} displays an overview of parties used for this research. For analysis of topics we mannually created an aggregated dataset, as shown in \textit{Table \ref{topic-table}} of main topics and potential subtopics based on the topics mentioned in the voting guide and analysis of the election manifestos of the CPB.  \\
 
+\begin{table}
+\begin{center}
+\begin{tabular}{||c c c c||} 
+ \hline
+ \multicolumn{4}{|c|}{\textbf{Overview of all 'sitting' Political Parties}} \\
+ \hline
+ VVD & D66 & PVV & CDA \\
+ \hline
+ GL-PvdA & SP & FvD & PvD \\
+ \hline
+ ChristenUnie & Volt & Ja21 & SGP \\
+ \hline
+ Denk & 50Plus & OPNL & BBB \\
+ \hline
+ Bij1 & Piratenpartij &  Splinter & BVNL  \\ [1ex] 
+ \hline
+ 
+\end{tabular}
+\\
+\caption{\label{party-table}All parties based on the results of the dutch elections of 2017, 2021 and 2023.}
+\end{center}
+\end{table}
 
-*Each of the parties is placed on a political spectrum (left, lean left, center, lean right, righ). Quote a source. There is probably an 'official' list for this. Based on what they voted (maybe stemmentracker)? \\
-
-Here a table of all parties? If they are left-wing, right-wing. How many zetels. Verkiesprogramma, Political leader etc. \\
-
-For analysis of topics we mannually created an aggregated dataset of main topics and potential subtopics based on the topics mentioned in the voting guide and analysis of the election manifestos of the CPB. \\
-
-Here a table of all topics? Based on stemwijzer. We used this for topics search etc.
+\begin{table}
+\begin{center}
+\begin{tabular}{||c c c c||} 
+ \hline
+ \multicolumn{4}{|c|}{\textbf{Overview of all topics (query words)}} \\
+ \hline
+ Immigration & Economics & Climate & Agriculture \\
+ \hline
+ Taxes & Healthcare & Rural areas & Public transport \\
+ \hline
+ Defence & Education & Housing & Religion \\
+ \hline
+ European Union & Income & Sentences &  \\
+ \hline
+ 
+\end{tabular}
+\\
+\caption{\label{topic-table}All topics based on the election manifestos summaries and voting guide.}
+\end{center}
+\end{table}
 
 \subsection{Data analysis}
 
