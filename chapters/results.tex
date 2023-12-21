@@ -13,6 +13,12 @@ Therefore, Mastodon has been more widely adopted for the most recent election ye
 \end{figure}
 
 \subsection{Activity of Political Parties (R1)}
+With the list of terms extracted from the voting guide, the platform is queried for these terms and cross-referenced with party names, resulting in a dataset reflecting what parties get mentioned most topically on Mastodon.
+The resulting graph in figure \ref{fig:partymentions} makes it clear that the Dutch socialist party (SP) is mentioned in conjunction with the topical terms the most.
+The candlestick graph, where the wick represents the deviation of terms, shows that the SP also has the widest variety of topics mentioned.
+One possible explanation is that their party initials are found in Dutch spelling quite commonly.
+However, when isolation their initials, the results are the same, although this could still be the result of errors in our search endpoint syntax.
+It is safe to assume the SP is an outlier, considering the second-highest activity party, is active on the platform itself and has a separate Mastodon instance
 
 \begin{figure*}[ht]
   \centering
@@ -32,10 +38,23 @@ Therefore, Mastodon has been more widely adopted for the most recent election ye
   \label{fig:results}
 \end{figure*}
 
-\textbf{Finding M1:} \textit{Out of all parties x parties are present on Mastodon and have instances.}
+Activity around parties seems to focus around a small set of parties.
+The second-highest mention, which seems like a more realistic activity hotspot, is the piratenpartij.
+Piratenpartij has its own Mastodon instance and multiple accounts, which also have the most activity itself, when compared to other party account on the platform, more in this is shown in the subsection for (R3).
+Their deviation in figure \ref{fig:partycandle} also shows they are talked about in conjunction with a wide variety of topics.
+Interestingly, the GL-PvdA party comes very close to the piratenpartij, even though they are not active on the platform themselves.
+An easy explanation would be, that this party has a lot of young voters and was mentioned in passing quite often because of their fusion (they used to be two separate parties).
+Moreover, a large group of their constituents is known to be active in online discourse on other social media as well, as well as the sister party of the SP aimed at teenagers. 
+
+\textbf{Finding M1:} \textit{Very few parties get mentioned, however, the parties that are mentioned are actively discussed. The cross-referencing might be influenced by the prevalence of the initials of parties in the Dutch language.}
 
 \subsection{Election-related topics and query words (R2)}
-
+The related topics mentioned per party mention shows an interesting spread when plotted.
+A hot topic, reasonably, is climate (and climate change) and “economy”, which in hindsight, might have been too general of a term, that etymologically contains most other terms as well.
+These topics get mentioned almost exclusively by left leaning parties, although it must be noted that almost all parties that have a reasonable amount of activity are left leaning.
+When comparing this chart to the activity around parties, it becomes clear there are certain queries that result in actual political discourse toots and queries that don't really have that much activity.
+Most mentions group around the active parties, while other mentions are so sparse and distributed, it seems more like the discourse is somewhat evenly spread across topics, when the party and topic itself get mentioned by users.
+There is no clear distinction in actual difference of discourse between parties.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\linewidth]{media/party-mentions-topics.jpeg}
@@ -44,10 +63,18 @@ Therefore, Mastodon has been more widely adopted for the most recent election ye
 \end{figure}
 
 
-\textbf{Finding M2:} \textit{Out of all parties, x parties are present on Mastodon and have instances.}
+\textbf{Finding M2:} \textit{Overall discourse seems to be on similar topics, only showing up in searches surrounding parties that have activity on the platform}
 
 \subsection{Analysis of Party accounts and servers (R3)}
-To han
+To more easily convey what parties have adopted the network, multiple queries have been performed, and analysed to find accounts connected to parties.
+A list of all parties, including their nicknames and different spellings of abbreviations or of those nicknames is looped through and queried in conjunction with different terms like “official”, “party”, “House of Representatives”, or “elections”, albeit in Dutch.
+These queries resulted in the tree of different party accounts, as seen in figure \ref{fig:partynetwork}.
+
+Noticeably, there are some parties that are not active on the main server, but instead have made their own server.
+The piratenpartij and Bij1 both have their own server, where the piratenpartij server is actually quite active, at least compared to Bij1's server.
+This also does not surprise from a political point of view, as the piratenpartij, translated to pirate party, was founded to legislate in internet laws and protect net neutrality.
+The self-proclaimed radical left Bij1 party also occasionally mentions their need to operate in decentralized structures and hierarchies in their news and SNS outings.
+The distinction between servers is more easily seen in figure \ref{fig:servernetwork} which branches to parties starting from the server as opposed to branching off from the party.
 
 \begin{figure}[ht]
   \centering
@@ -82,4 +109,4 @@ To han
 \end{figure*}
 
 
-\textbf{Finding M3:} \textit{Out of all parties x parties are present on Mastodon and have instances.}
+\textbf{Finding M3:} \textit{Out of all parties, 7 parties are present on Mastodon and 2 have their own instances.}
