@@ -1,20 +1,20 @@
 \section{Results}
+The results section is divided into three subsections, each corresponding to the individual research questions as described in the \textit{introduction} section. (R1) Relateing to activity of political parties on the platform, (R2) relating to topics from election manifestos and voting guides, and (R3) relating to a network analysis of instances and servers of political parties on the network. Each with accompanying descriptions of the methods performed and graphs to further understand the data and the result of the analysis.
 
-The results section is divided into three subsections eachs corresponding to the individual research questions as described in the \textit{introduction} section. The first (R1) research question related to activity of political parties on the platform, the second (R2) relates to topics from election manifestos and voting guides and the third (R3) is a network analysis of instances and servers of political parties on the network. Each with accompanying descriptions of the methods performed and graphs to further understand the data and the result of the analysis.
+A clear increase in general activity surrounding the Dutch elections on the platform is found.
+When querying toots with general terms on Dutch elections, for example “verkiezingen”, “ducth elections”, or “tweede kamer”, the results have very clearly spiked in the last period, as shown in figure \ref{fig:electionstotal}. A total of 18,230 toots were retrieved, which included these election related terms, of which around 16,000 are in the last two years.
+Therefore, Mastodon has been more widely adopted for the most recent election year, 2023, as opposed to previous elections, 2017 and 2021, which showed almost no activity on these general queries.
 
-Before describing the individual research questions what's interesting to note related to the the general increase of activity in terms of the dutch elections on the whole Mastodon platform is that if a query is performed on all toots related to dutch elections (includes terms such as 'dutch elections', 'verkiezingen', 'tweedekamer', 'tweede kamer') and plot them based on year we get the result as shown in figure \ref{fig:electionstotal}. This results in a total of 18.230 toots which included election related terms of which around 16.000 are in the last two years. A clear spike in activity is seen in the most recent election year, 2023, as opossed to previous elections, 2017 and 2021, which show almost no activity on general election query words.
-
-
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=3.25in]{media/dutch-elections-mastodon.jpeg}
-  \caption{Bar chart of query words related to dutch elections}
+  \caption{Bar chart of query word results, using general terms surrounding Dutch elections}
   \label{fig:electionstotal}
 \end{figure}
 
 \subsection{Activity of Political Parties (R1)}
 
-\begin{figure*}[!]
+\begin{figure*}[ht]
   \centering
   \begin{subfigure}[h]{.49\linewidth}
     \includegraphics[width=\textwidth]{media/party-mentions.jpeg}
@@ -25,8 +25,8 @@ Before describing the individual research questions what's interesting to note r
   \begin{subfigure}[h]{.49\linewidth}
       \captionsetup{justification=centering}
       \includegraphics[width=\textwidth]{media/party-mentions-query-words.jpeg}
-      \caption{Bar plot showing party mentions based on topics query words}
-      \label{fig:partymentionsquery}
+      \caption{Candlestick chart showing parties being mentioned based on topical query words. The wick represents the spread of unique topics}
+      \label{fig:partycandle}
   \end{subfigure}
   \caption{Graphs visualizing party activity based on party name mentions and query words based on topics}
   \label{fig:results}
@@ -36,27 +36,34 @@ Before describing the individual research questions what's interesting to note r
 
 \subsection{Election-related topics and query words (R2)}
 
-\begin{figure}[H]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=\linewidth]{media/party-mentions-topics.jpeg}
   \caption{Party mentions related to topics}
-  \label{fig:electionstotal}
+  \label{fig:topic}
 \end{figure}
 
 
-\textbf{Finding M2:} \textit{Out of all parties x parties are present on Mastodon and have instances.}
+\textbf{Finding M2:} \textit{Out of all parties, x parties are present on Mastodon and have instances.}
 
-\subsection{Network Analysis of Parties instances and servers (R3)}
+\subsection{Analysis of Party accounts and servers (R3)}
+To han
 
-
-\begin{figure}[!]
+\begin{figure}[ht]
   \centering
-  \includegraphics[width=\linewidth]{media/party-network.png}
-  \caption{Overview of parties and corresponding sub instances}
+  \includegraphics[width=\linewidth]{media/chapter.png}
+  \caption{Tree of party accounts, branching from their district}
   \label{fig:partynetwork}
 \end{figure}
 
-\begin{figure*}[!]
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\linewidth]{media/server.png}
+  \caption{Tree of party accounts, branching from their respective server}
+  \label{fig:servernetwork}
+\end{figure}
+
+\begin{figure*}[ht]
   \centering
   \begin{subfigure}[h]{.49\linewidth}
     \includegraphics[width=\textwidth]{media/parties-following-counts.jpeg}

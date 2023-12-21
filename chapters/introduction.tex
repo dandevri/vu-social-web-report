@@ -1,37 +1,36 @@
 \section{Introduction}
-
-On the 22nd of November, 2023, the dutch population voted for the national Dutch House of Representatives elections \cite{kies}.
+On the 22nd of November 2023, the Dutch population voted for the national Dutch House of Representatives elections \cite{kies}.
 Of the 13,473,750 eligible voters, 10,475,139 voted, resulting in a turnout of around 77.7\%.
 Of the 26 parties that participated in the election, 15 parties received enough votes for a seat in the House of Representatives.
-Prior to elections, viewpoints and topics of particular parties are usually widely discussed on Social Networking Sites (SNS).
+Prior to elections, viewpoints, and topics of particular parties are usually widely discussed on Social Networking Sites (SNS).
 As an example, users might post their support, or opposition, for a political party, discuss topics that are mentioned in party manifestos, and discuss candidates that are on the electable candidates list.
 
-Since the last elections, there have emerged new Social Networking Sites, the most publicly known and somewhat succesful being Mastodon\footnote{https://joinmastodon.org/}.
+Since the last elections, there have emerged new Social Networking Sites, the most publicly known and somewhat successful being Mastodon\footnote{https://joinmastodon.org/}.
 Mastodon is a decentralized social network with microblogging features similar to X\footnote{https://twitter.com/}, colloquially and formerly known as Twitter.
-Using Mastodon to analyze the adoption of a new social media network for political purposes is interesting for mainly two important reasons. 
-(1) Since it's release, especially in the last two years, Mastodon has seen a massive increase in users and activity.
-Their analytics publication suggest a growth from around 3.500.000 in october 2022 to 8.100.000 users in october 2023 \cite{analytics}.
+Using Mastodon to analyse the adoption of a new social media network for political purposes is interesting for mainly two important reasons. 
+(1) Since its release, especially in the last two years, Mastodon has seen a massive increase in users and activity.
+Their analytics publication suggests a growth from around 3,500,000 in October 2022 to 8,100,000 users in October 2023 \cite{analytics}.
 A large influence for this growth is the acquisition of Twitter by Elon Musk \cite{musk}.
 Many users, at least temporarily, transition from X/Twitter to Mastodon.
-(2) Elections for the Dutch house of representatives occur every 4 years.
-Moreover, we've even seen dutch political parties create Mastodon instances for their party members.
-For example the servers of Bij1\footnote{https://social.bij1.org/about} and Piratenpartij\footnote{https://mastodon.social/@Piratenpartij@social.globalpirates.net}.
-Therefore, we can assume Mastodon is becoming increasingly more representative of the dutch voting population or its political environment.
+(2) Elections for the Dutch House of Representatives occur every 4 years.
+Moreover, we've even seen Dutch political parties create Mastodon instances for their party members.
+For example, the servers of Bij1\footnote{https://social.bij1.org/about} and Piratenpartij\footnote{https://mastodon.social/@Piratenpartij@social.globalpirates.net}.
+Therefore, we can assume Mastodon is becoming increasingly more representative of the Dutch voting population or its political environment.
 (*) Besides these reasons, it is important to note that the use of Mastodon has a data collection advantage.
-Their API is mostly public mostly secured with the use of simple rate limitting.
+Their API is mostly public, mostly secured with the use of simple rate limiting.
 Therefore, it is easy to collect data from the platform and utilize it for case study purposes.
 
 In order to investigate this phenomenon, this report aims to explore the following research question:
-\textbf{\textit{"To what extent is the relatively new Social Networking Site Mastodon representative of the election voting of the dutch population?"}}.
+\textbf{\textit{“To what extent is the relatively new Social Networking Site Mastodon representative of the election voting of the Dutch population?”}}.
 To approach this research question in-depth, the following sub-questions are formulated:
 \begin{itemize}
-  \item \textbf{R1:} \textit{What's the distribution of political parties on the platform and do they align with the outcome of the election? }
-  \item \textbf{R2:} \textit{What political topics are discussed in posts and are they representative of the election manifesto of political parties? }
+  \item \textbf{R1:} \textit{What's the distribution of political parties on the platform, and do they align with the outcome of the election? }
+  \item \textbf{R2:} \textit{What political topics are discussed in posts, and are they representative of the election manifesto of political parties? }
   \item \textbf{R3:} \textit{Do the topics that are discussed on the platform align with popular voting guides and results?}
 \end{itemize}
 
 In order to answer the research questions, this papers starts with an examination of prior research on Mastodon as a platform and literature using related methods.
-For the aforementioned approaches, the focus lies on network analysis, and semantical data analysis.
+For the aforementioned approaches, the focus lies on network analysis, and data analysis.
 The report will briefly explain the data gathering and pre-processing, using the Mastodon API data and other, election related, datasets.
-The data collection and analysis, and subsequently comparing it to government published or endorsed sources will attempt to conceptualize the adoption of this relatively new SNS.
+The data collection and analysis, and subsequently comparing it to government published or endorsed sources, will attempt to conceptualize the adoption of this relatively new SNS.
 Finally, the report will conclude with a discussion of the results and a reflection on the research question, attempting to find out whether the SNS is representative, or conversely the official sources.
