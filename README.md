@@ -12,8 +12,8 @@ Written report for the social web course for the Vrije Universiteit Amsterdam.
 
 > Prior to elections viewpoints of parties of various users are
 often expressed on Social Networking Sites (SNS) since expressing opinion
-is one of the core characteristics of social media. Recently, (on November
-2023) elections for the Dutch House of Representatives took place. This
+is one of the core characteristics of social media. Recently on November
+2023 elections for the Dutch House of Representatives took place. This
 study focuses on on a data-driven social web approach aiming to answer
 the research question: to what extent is the relatively new SNS ’Mastodon’
 representative of the election voting of the Dutch population? In the
@@ -37,7 +37,7 @@ processing methods and to further expand the election data sources use
 * Conclusion; a summary of the main findings.
 * Discussion; privacy & ethical consideration.
 * Future work; known limitations of the research.
-Acknowledgments
+* Acknowledgments
 * Appendix
 
 ## License
