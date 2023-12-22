@@ -1,16 +1,9 @@
 \section{Future work}
 
-Each of the parties is placed on a political spectrum (left, center left, centre, centre right, right). Quote a source.
-There is probably an 'official' list for this.
-Based on what they voted (maybe stemmentracker)? If they are left-wing, right-wing. How many zetels etc. this could be part of our weighting. We now say each party is equal in our graphs. But some parties are 'larger' in terms of ledennummers etc.
+In future work, it will be important to consider several key factors to enhance the effectiveness and enrich the datasets used in this research which are described in more detail below.
 
-The list of topics should be larger.
-We now manually made a list of topics based on summaries and manually scanning trough table of content of manifestos.
-This could be automated in future work by having NLP scan table of contents from election manifestos, motions or determine the topic using classification based on voting guides (stemwijzers).
+Currently, this research uses a subset of metadata available for each political party. Mainly the party names and election results. To further cross-reference the Mastodon we could enrich the metadata for each party to incorporate political spectrum data (e.g. official grouping from ProDemos or how parties voted based on the StemmenTracker \footnote{https://home.stemmentracker.nl/}) and 'weigh' each party based on left-wing, neutral or right-wing. With this the research could incorporate a 'popularity weighting' of each party since our current visualization treat each party the same not taking into account the amount of seats in the house of representatives or number of members.
 
-The network analysis focusses on political parties, but most party have one 'fractievoorzitter'.
-To further analyse the network, we could also switch to individual user accounts of the fractievoorzitter's of the kamer and see based on whom they follow or their follower account what other politicians of the party have accounts on Mastodon.
+The (Network) analysis currently also focusses on political parties and thus instances or servers related to the political parties but analysation of individual user accounts of faction leaders is not yet performed. To further analyse the network and get an overview of connections analysyation of personal accounts need to be performed to plot further relations of the network based on who faction leaders follow or who are following them.
 
-The topics displayed in the voting guides are the topics parties mostly disagree on and are picked based on a larger list of topics. 
-That doesn't necessary mean these topics are the most popular topics in society. 
-For future research, we would like to cross-reference topics from the voting guides with topics discussed on social networks to see if topics that gain traction on social networking sites align with topics from the stemwijzer.
+Query words and list of election-related topics in this research are manually labelled. This can be further expanded by automating this task, for example using Natural Language Processing (NLP) to scan through the table of contents of election manifestos or determine topics automatically based on keywords in quotes from voting guides. This also further enhances the reliability of the data since topics displayed in voting guides are what parties mostly disagree on. This doesn't necessarily mean these topics are the most popular topics in society among voters. For future research, it would also be interesting to cross-reference topics from the voting guides with topics discussed on social networks to see if topics that gain traction on social networking sites align with topics from voting guides.
