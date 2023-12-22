@@ -2,7 +2,7 @@
 \subsection{Data collection \& datasets}
 To gather social web data from Mastodon, the official public Mastodon API \footnote{https://docs.joinmastodon.org/client/intro/} is interfaced with, by the use of an unofficial wrapper library known as; Mastodon.py\footnote{https://mastodonpy.readthedocs.io/en/stable/}.
 Mastodon is an ActivityPub-based\footnote{https://www.w3.org/TR/activitypub/} Twitter-like federated social network node.
-The API wrapper is feature complete for Mastodon API version 3.5.5.
+The API wrapper is feature-complete for Mastodon API version 3.5.5.
 First, a user account is created on the platform by completing the sign-up for an account flow on the Mastodon official website, \textit{joingmastodon.org}.
 The account is created on the general and largest public server (provider) \textit{mastodon.social} operated by the Mastodon GmbH non-profit.
 However, the public API allows for exploring other public servers, which are integrated in the methods provided by the API wrapper.
@@ -12,25 +12,25 @@ For this research, we mainly used API methods for:
 \begin{itemize}
   \item \textbf{Accounts, relationships, and lists:} fetch information about accounts and associated data as well as update personal entries of this type.
   \item \textbf{Instance-wide data and search:} fetch information associated with the current instance, as well as data from the instance-wide profile directory. 
-  The API wrapper, uses this endpoint to combine results for certain search methods.
+  The API wrapper uses this endpoint to combine results for certain search methods.
   \item \textbf{Streaming:} access to the streaming API for public, local, and hashtag streams.
   The API wrapper utilizes streaming and a built-in rate limit tracker to optimize speed and data integrity.
 \end{itemize}
 
-Arguments and parameters used in queries are related to the Dutch elections, e.g.\ names of political candidates, popular topics from parties.
+Arguments and parameters used in queries are related to the Dutch elections, e.g.\ names of political candidates, and popular topics from parties.
 However, this is further expanded upon in the data preprocessing and results section of this research.
-To check, validate, and cross-reference, the data is complemented with five additional 'official' or 'officially endorsed' election related data sources: 
+To check, validate, and cross-reference, the data is complemented with five additional 'official' or 'officially endorsed' election-related data sources: 
 \begin{itemize}
   \item \textbf{Institut Public de Sondage d'Opinion Secteur (IPSOS) exitpoll:} a market research company which, commissioned by the “Nederlandse Omroep Stichting”\footnote{https://nos.nl/} (NOS; English: Dutch Broadcasting Foundation).
   They publish research surrounding the elections, attempting to capture data such as what demographic of voters switch between parties.
   For example, constituents of which municipalities have switched the most between parties\cite{nos}. 
-  This gives a comprehensive insight of voting behaviour from the recent election.
+  This gives a comprehensive insight into voting behavior from the recent election.
   \item \textbf{Government Open Data (overheid.nl)}: specifically the datasets from The Dutch Electoral Council\footnote{https://www.kiesraad.nl/} (Dutch: Kiesraad), the government body that is responsible for counting the votes and publishing the results\cite{kiesraad}.
   This source is used as the official results of parties and candidates for the recent elections.
   \item \textbf{ProDemos voting guide (stemwijzer)}: a voting guide called Stemwijzer\footnote{https://home.stemwijzer.nl/} with pre-defined topics.
-  By answering positive, negative or neutral to 30 statements, electors can compare their positions with those of electable political parties.
-  Many of these voting guides exist, however, ProDemos is colloquial known as the “official” voter guide, and partly funded by the Dutch government \cite{prodemos}. 
-  This source provides insight in important topics from political parties for the recent elections, which subsequently get primed by the parties that are included.
+  By answering positive, negative, or neutral to 30 statements, electors can compare their positions with those of electable political parties.
+  Many of these voting guides exist, however, ProDemos is colloquially known as the “official” voter guide, and is partly funded by the Dutch government \cite{prodemos}. 
+  This source provides insight into important topics from political parties for the recent elections, which subsequently get primed by the parties that are included.
   \item \textbf{Electoral Council (kiesraad)}: the Kiesraad\footnote{https://english.kiesraad.nl/} is a central electoral committee, an advisory body, and acts as a central polling station during the Dutch House of Representatives election.
   For this report, we used the published Candidacy for the House of Representatives election list and the Political Party Registrar.
   \item \textbf{Netherlands Bureau for Economic Policy Analysis (cpb)}: the Dutch economics bureau (CPB) \footnote{https://www.cpb.nl/en/charted-choices-2025-2028} performs election manifestos analysis to determine how feasible manifestos of political parties are.
@@ -38,20 +38,20 @@ To check, validate, and cross-reference, the data is complemented with five addi
 \end{itemize}
 
 \subsection{Data preprocessing (scope)}
-With these gathered sources surrounding the dutch-election, a relevant scope for this report is determined.
+With these gathered sources surrounding the Dutch election, a relevant scope for this report is determined.
 For the starting point of our temporal data, we constructed a timeline starting at Mastodon's initial release on 16 March 2016 (7 years ago).
 This means we analyse three House of Representatives elections.
-In 2017 with a turnout rate of 81.57\% of Dutch population, in 2021 with a turnout rate of 78,71\% of dutch population and the most recent, as of writing this paper in 2023, with a turnout rate of 77,75\% of Dutch constituents.
-Usually Dutch elections take place every four years, thus we expected the next elections to be held in 2025.
+In 2017 with a turnout rate of 81.57\% of the Dutch population, in 2021 with a turnout rate of 78,71\% of Dutch population and the most recent, as of writing this paper in 2023, with a turnout rate of 77,75\% of Dutch constituents.
+Usually, Dutch elections take place every four years, thus the next elections were expected to be held in 2025.
 However, a snap election was called after the fourth term of Rutte and his coalition collapsed due to immigration policy disagreements between the coalition parties.
 
 During this timeframe, a total of 42 unique parties were electable during the elections.
-28 parties in 2017, 37 parties in 2021 and 26 parties in 2023.
+28 parties in 2017, 37 parties in 2021, and 26 parties in 2023.
 A subset of political parties has been constructed, based on incumbent parties ('zittende partijen' in Dutch) as a result of the most recent and previous elections.
 This gives a total of 20 parties.
 This research also has taken synonyms and abbreviations of parties into account, for example, Forum voor Democratie is often abbreviated to 'FvD' or GL-PvdA is still often mentioned with full names after the merger in 2022 as Groenlinks and Partij voor de Arbied.
 \textit{Table \ref{party-table}} displays an overview of parties used for this research.
-For the analysis of topics, a manually created aggregated dataset is used, as shown in \textit{Table \ref{topic-table}} of main topics, and potential subtopics, based on the statements provided by the stemwijzer and the analysis of the manifestos made by the CPB.  \\
+For the analysis of topics, a manually created aggregated dataset is used, as shown in \textit{Table \ref{topic-table}} of main topics, and potential subtopics, based on the statements provided by the Stemwijzer and the analysis of the manifestos made by the CPB.  \\
 
 \begin{table}
 \centering
@@ -95,5 +95,5 @@ For the analysis of topics, a manually created aggregated dataset is used, as sh
 
 \subsection{Data analysis}
 
-This research focusses on Network Analysis which is performed using the Python programming language (latest stable version 3.12.0) following the Jupyter\footnote{https://jupyter.org/} notebook standard which combines code, documentation, data, and visualizations. Besides the Mastodon.py API wrapper to access the Mastodon data, the notebooks use NetworkX\footnote{https://networkx.org/} to perform Network Analysis.
-This library allows for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks and has built-in functions for common analysis measurements and displaying graphs. To display data  plot distributions, and creating visualizations, a combination of Matplotlib\footnote{https://matplotlib.org/} and Seaborn\footnote{https://seaborn.pydata.org/} are used.
+This research focuses on (Network) Data Analysis which is performed using the Python programming language (latest stable version 3.12.0) following the Jupyter\footnote{https://jupyter.org/} notebook standard which combines code, documentation, data, and visualizations. Besides the Mastodon.py API wrapper to access the Mastodon data, the notebooks use NetworkX\footnote{https://networkx.org/} to perform Network Analysis.
+This library allows for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks and has built-in functions for common analysis measurements and displaying graphs. To display data plot distributions, and create visualizations, a combination of Matplotlib\footnote{https://matplotlib.org/} and Seaborn\footnote{https://seaborn.pydata.org/} are used.

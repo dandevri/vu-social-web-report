@@ -1,8 +1,8 @@
 \section{Results}
-The results section is divided into three subsections, each corresponding to the individual research questions as described in the \textit{introduction} section. (R1) Relateing to activity of political parties on the platform, (R2) relating to topics from election manifestos and voting guides, and (R3) relating to a network analysis of instances and servers of political parties on the network. Each with accompanying descriptions of the methods performed and graphs to further understand the data and the result of the analysis.
+The results section is divided into three subsections, each corresponding to the individual research questions as described in the \textit{introduction} section. (R1) Relates to the activity of political parties on the platform, (R2) relates to topics from election manifestos and voting guides, and (R3) relates to network analysis of instances and servers of political parties on the network. Each with accompanying descriptions of the methods performed and graphs to further understand the data and the result of the analysis.
 
 A clear increase in general activity surrounding the Dutch elections on the platform is found.
-When querying toots with general terms on Dutch elections, for example “verkiezingen”, “ducth elections”, or “tweede kamer”, the results have very clearly spiked in the last period, as shown in figure \ref{fig:electionstotal}. A total of 18,230 toots were retrieved, which included these election related terms, of which around 16,000 are in the last two years.
+When querying toots with general terms on Dutch elections, for example, “verkiezingen”, “dutch elections”, or “tweede kamer”, the results have very clearly spiked in the last period, as shown in figure \ref{fig:electionstotal}. A total of 18,230 toots were retrieved, which included these election-related terms, of which around 16,000 were in the last two years.
 Therefore, Mastodon has been more widely adopted for the most recent election year, 2023, as opposed to previous elections, 2017 and 2021, which showed almost no activity on these general queries.
 
 \begin{figure}[ht]
@@ -38,23 +38,23 @@ It is safe to assume the SP is an outlier, considering the second-highest activi
   \label{fig:results}
 \end{figure*}
 
-Activity around parties seems to focus around a small set of parties.
-The second-highest mention, which seems like a more realistic activity hotspot, is the piratenpartij.
-Piratenpartij has its own Mastodon instance and multiple accounts, which also have the most activity itself, when compared to other party account on the platform, more in this is shown in the subsection for (R3).
+Activity around parties seems to focus on a small set of parties.
+The second-highest mention, which seems like a more realistic activity hotspot, is the Piratenpartij.
+Piratenpartij has its own Mastodon instance and multiple accounts, which also have the most activity itself, when compared to other party accounts on the platform, more of this is shown in the subsection for (R3).
 Their deviation in figure \ref{fig:partycandle} also shows they are talked about in conjunction with a wide variety of topics.
-Interestingly, the GL-PvdA party comes very close to the piratenpartij, even though they are not active on the platform themselves.
+Interestingly, the GL-PvdA party comes very close to the Piratenpartij, even though they are not active on the platform themselves.
 An easy explanation would be, that this party has a lot of young voters and was mentioned in passing quite often because of their fusion (they used to be two separate parties).
 Moreover, a large group of their constituents is known to be active in online discourse on other social media as well, as well as the sister party of the SP aimed at teenagers. 
 
 \textbf{Finding M1:} \textit{Very few parties get mentioned, however, the parties that are mentioned are actively discussed. The cross-referencing might be influenced by the prevalence of the initials of parties in the Dutch language.}
 
 \subsection{Election-related topics and query words (R2)}
-The related topics mentioned per party mention shows an interesting spread when plotted.
+The related topics mentioned per party mention show an interesting spread when plotted.
 A hot topic, reasonably, is climate (and climate change) and “economy”, which in hindsight, might have been too general of a term, that etymologically contains most other terms as well.
-These topics get mentioned almost exclusively by left leaning parties, although it must be noted that almost all parties that have a reasonable amount of activity are left leaning.
-When comparing this chart to the activity around parties, it becomes clear there are certain queries that result in actual political discourse toots and queries that don't really have that much activity.
-Most mentions group around the active parties, while other mentions are so sparse and distributed, it seems more like the discourse is somewhat evenly spread across topics, when the party and topic itself get mentioned by users.
-There is no clear distinction in actual difference of discourse between parties.
+These topics get mentioned almost exclusively by left-leaning parties, although it must be noted that almost all parties that have a reasonable amount of activity are left-leaning.
+When comparing this chart to the activity around parties, it becomes clear certain queries result in actual political discourse toots and queries that don't have that much activity.
+Most mentions group around the active parties, while other mentions are so sparse and distributed, that it seems more like the discourse is somewhat evenly spread across topics when the party and topic itself get mentioned by users.
+There is no clear distinction in the actual difference of discourse between parties.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\linewidth]{media/party-mentions-topics.jpeg}
@@ -67,12 +67,12 @@ There is no clear distinction in actual difference of discourse between parties.
 
 \subsection{Analysis of Party accounts and servers (R3)}
 To more easily convey what parties have adopted the network, multiple queries have been performed, and analysed to find accounts connected to parties.
-A list of all parties, including their nicknames and different spellings of abbreviations or of those nicknames is looped through and queried in conjunction with different terms like “official”, “party”, “House of Representatives”, or “elections”, albeit in Dutch.
+A list of all parties, including their nicknames and different spellings of abbreviations or those nicknames is looped through and queried in conjunction with different terms like “official”, “party”, “House of Representatives”, or “elections”, albeit in Dutch.
 These queries resulted in the tree of different party accounts, as seen in figure \ref{fig:partynetwork}.
 
-Noticeably, there are some parties that are not active on the main server, but instead have made their own server.
-The piratenpartij and Bij1 both have their own server, where the piratenpartij server is actually quite active, at least compared to Bij1's server.
-This also does not surprise from a political point of view, as the piratenpartij, translated to pirate party, was founded to legislate in internet laws and protect net neutrality.
+Noticeably, some parties are not active on the main server but instead have made their own server.
+The Piratenpartij and Bij1 both have their own server, where the Piratenpartij server is quite active, at least compared to Bij1's server.
+This also does not surprise from a political point of view, as the Piratenpartij, was founded to legislate internet laws and protect net neutrality.
 The self-proclaimed radical left Bij1 party also occasionally mentions their need to operate in decentralized structures and hierarchies in their news and SNS outings.
 The distinction between servers is more easily seen in figure \ref{fig:servernetwork} which branches to parties starting from the server as opposed to branching off from the party.
 
